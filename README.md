@@ -25,6 +25,7 @@ base-plugins:
 - [x] `webpack-bundle-analyzer`打包后文件大小分析
 - [x] 比 gzip 体验更好的 Zopfli 压缩
 - [x] 配置proxy代理解决跨域问题
+- [x] 去除`console`
 - [ ] less css预设
 
 ## Project setup
