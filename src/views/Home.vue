@@ -1,19 +1,33 @@
 <template>
   <div class="home">
-    <!-- <div>{{ result }}</div> -->
+    <div>{{ indexInfo }}</div>
+    <div><button @click="changeIndexInfo">修改数据</button></div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "vue";
+import { defineComponent, onMounted, reactive, ref, toRefs } from "vue";
 import { CommonService } from "@/api/common";
 
 export default defineComponent({
   setup() {
+    const data = reactive({
+      indexInfo: {}
+    });
     onMounted(async () => {
       const result = await CommonService.getIndexInfo();
       console.log(result);
+      data.indexInfo = result.data;
     });
+
+    const changeIndexInfo = () => {
+      data.indexInfo = { 1: 2 };
+    };
+
+    return {
+      ...toRefs(data),
+      changeIndexInfo
+    };
   }
 });
 </script>

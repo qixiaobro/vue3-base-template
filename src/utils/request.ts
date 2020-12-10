@@ -64,7 +64,7 @@ service.interceptors.response.use(
   // 请求有响应
   async (response: AxiosResponse) => {
     if (response.status === 200) {
-      return Promise.resolve(response);
+      return Promise.resolve(response.data.data);
     } else {
       const msg = getErrorCode2text(response);
       return Promise.reject(new Error(msg));
