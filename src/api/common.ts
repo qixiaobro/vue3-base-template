@@ -8,6 +8,6 @@ import { HttpResponse } from "@/@types/index";
 export class CommonService {
   // 获取基本信息
   static getIndexInfo(): Promise<HttpResponse> {
-    return Axios.get("/auth/userInfo");
+    return Axios.get("/api/auth/userInfo");
   }
 }

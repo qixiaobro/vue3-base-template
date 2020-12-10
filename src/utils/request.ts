@@ -5,7 +5,7 @@ import { getItem } from "@/utils/storage";
  * @description: 定义请求实例
  */
 const service = Axios.create({
-  baseURL: process.env.VUE_APP_BASE_URL,
+  baseURL: process.env.VUE_APP_API,
   timeout: 10000,
   headers: {
     Accept: "application/json",
