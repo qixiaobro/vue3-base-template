@@ -1,18 +1,19 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <!-- <div>{{ result }}</div> -->
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import { defineComponent, onMounted, ref } from "vue";
+import { CommonService } from "@/api/common";
 
-@Options({
-  components: {
-    HelloWorld
+export default defineComponent({
+  setup() {
+    onMounted(async () => {
+      const result = await CommonService.getIndexInfo();
+      console.log(result);
+    });
   }
-})
-export default class Home extends Vue {}
+});
 </script>
