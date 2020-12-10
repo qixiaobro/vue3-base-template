@@ -3,12 +3,11 @@
 
 
 
-- [ ] vue.config.js 配置
+- [x] vue.config.js 配置
 - [ ] vuex  /模块分解
 - [ ] vue-router/ 守卫封装
-- [ ] element-ui
 - [ ] type /typescript 类封装
-- [ ] axios封装
+- [x] axios封装
 - [ ] .env.prod  .env.test
 - [ ] utils  /工具封装
 - [ ] theme
