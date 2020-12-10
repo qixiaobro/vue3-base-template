@@ -20,12 +20,12 @@
 
 base-plugins:
 
-- [x]修复HMR(热更新)失效
-- [x]添加别名
-- [x]`image-webpack-loader`压缩图片
-- [x]`webpack-bundle-analyzer`打包后文件大小分析
-- [x]比 gzip 体验更好的 Zopfli 压缩
-- [x]配置proxy代理解决跨域问题
+- [x] 修复HMR(热更新)失效
+- [x] 添加别名
+- [x] `image-webpack-loader`压缩图片
+- [x] `webpack-bundle-analyzer`打包后文件大小分析
+- [x] 比 gzip 体验更好的 Zopfli 压缩
+- [x] 配置proxy代理解决跨域问题
 - [ ] less css预设
 
 ## Project setup
