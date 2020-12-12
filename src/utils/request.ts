@@ -54,6 +54,7 @@ service.interceptors.request.use(async (config: AxiosRequestConfig) => {
   if (config.data) {
     // store.commit("setLoadingStatus", config.data["isLoading"]);
   }
+  console.log(process.env);
   return config;
 });
 

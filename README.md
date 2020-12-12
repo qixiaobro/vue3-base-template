@@ -10,7 +10,7 @@
 - [ ] vue-router/ 守卫封装
 - [ ] type /typescript 类封装
 - [x] axios封装
-- [ ] .env.prod  .env.test
+- [ ] .env  .env.production
 - [ ] utils  /工具封装
 - [ ] theme
 - [ ] styles

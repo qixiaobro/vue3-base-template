@@ -117,11 +117,11 @@ module.exports = {
         target:
           "https://www.fastmock.site/mock/1f35985adb58af2c3341fd7803d8540f", // 目标代理接口地址
         secure: false,
-        changeOrigin: true, // 开启代理，在本地创建一个虚拟服务端
+        changeOrigin: true // 开启代理，在本地创建一个虚拟服务端
         // ws: true, // 是否启用websockets
-        pathRewrite: {
-          "^/api": "/"
-        }
+        // pathRewrite: {
+        //   "^/api": "/"
+        // }
       }
     }
   }
