@@ -99,6 +99,26 @@ module.exports = {
     config.plugins = [...config.plugins, ...plugins];
   },
 
+  css: {
+    extract: IS_PROD,
+    sourceMap: !IS_PROD,
+    loaderOptions: {
+      less: {
+        globalVars: {},
+        lessOptions: {
+          javascriptEnabled: true
+        }
+      }
+    }
+  },
+  pluginOptions: {
+    /** 全局加载less 的 webpack 插件  */
+    "style-resources-loader": {
+      preProcessor: "less",
+      patterns: [path.resolve(__dirname, "./src/styles/index.less")]
+    }
+  },
+
   /**
    * @TODO 配置proxy代理解决跨域问题
    */

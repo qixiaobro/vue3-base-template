@@ -10,13 +10,13 @@
 - [ ] vue-router/ 守卫封装
 - [ ] type /typescript 类封装
 - [x] axios封装
-- [ ] .env  .env.production
+- [x] .env  .env.production
 - [ ] utils  /工具封装
 - [ ] theme
-- [ ] styles
+- [x] styles
 - [ ] api模块
 - [ ] views
-- [ ] less
+- [x] less
 - [ ] components
 
 base-plugins:
@@ -28,7 +28,7 @@ base-plugins:
 - [x] 比 gzip 体验更好的 Zopfli 压缩
 - [x] 配置proxy代理解决跨域问题
 - [x] 去除`console`
-- [ ] less css预设
+- [x] less css预设
 
 ## Project setup
 ```
