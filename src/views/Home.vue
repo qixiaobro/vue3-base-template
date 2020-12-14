@@ -31,3 +31,8 @@ export default defineComponent({
   }
 });
 </script>
+<style lang="less" scoped>
+.home {
+  color: @primary-color;
+}
+</style>

@@ -42,7 +42,9 @@
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "prettier": "^1.19.1",
+    "style-resources-loader": "^1.4.1",
     "typescript": "~3.9.3",
+    "vue-cli-plugin-style-resources-loader": "^0.1.4",
     "webpack-bundle-analyzer": "^4.2.0"
   }
 }
