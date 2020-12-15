@@ -1,6 +1,7 @@
 {
   "name": "vue3-base-template",
   "version": "0.1.0",
+  "description": "使用vue3+TypeScript封装的项目基础模版。",
   "private": true,
   "scripts": {
     "serve:dev": "vue-cli-service serve",
@@ -9,9 +10,11 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.0.0-beta.21",
     "axios": "^0.21.0",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
+    "vue-composable": "^1.0.0-beta.12",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },

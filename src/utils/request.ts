@@ -1,6 +1,7 @@
 import Axios, { AxiosResponse, AxiosRequestConfig, AxiosError } from "axios";
-import { getItem } from "@/utils/storage";
-
+import { useLocalStorage } from "vue-composable";
+const tokenTypeStorage = useLocalStorage("token_type");
+const accessTokenStorage = useLocalStorage("access_token");
 /**
  * @description: 定义请求实例
  */
@@ -44,9 +45,9 @@ const getErrorCode2text = (response: AxiosResponse): string => {
  */
 service.interceptors.request.use(async (config: AxiosRequestConfig) => {
   // 如果本地有token，则取，否则不添加Authorization
-  if (getItem("token_type") && getItem("access_token")) {
-    const tokenType = getItem("token_type");
-    const accessToken = getItem("access_token");
+  if (tokenTypeStorage.storage.value && accessTokenStorage.storage.value) {
+    const tokenType = tokenTypeStorage.storage.value;
+    const accessToken = accessTokenStorage.storage.value;
     config.headers.Authorization = `${tokenType} ${accessToken}`;
   }
 
