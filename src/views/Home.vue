@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, reactive, ref, toRefs } from "vue";
+import { defineComponent, onMounted, reactive, toRefs } from "vue";
 import { CommonService } from "@/api/common";
 
 export default defineComponent({
