@@ -6,14 +6,14 @@
 
 
 - [x] vue.config.js 配置
-- [ ] vuex  /模块分解
+- [x] vuex  /模块分解
 - [x] vue-router
 - [x] type /typescript 类封装
 - [x] axios封装
 - [x] .env  .env.production
 - [x] utils  /工具封装
-- [ ] theme
-- [ ] i18n
+<!-- - [ ] theme
+- [ ] i18n -->
 - [x] styles
 - [x] api模块
 - [x] less
