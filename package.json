@@ -1,20 +1,25 @@
 {
   "name": "vue3-base-template",
   "version": "0.1.0",
+  "description": "使用vue3+TypeScript封装的项目基础模版。",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve:dev": "vue-cli-service serve",
+    "build:prod": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.0.0-beta.21",
+    "axios": "^0.21.0",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
+    "vue-composable": "^1.0.0-beta.12",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
+    "@gfx/zopfli": "^1.0.15",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^5.2.4",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
@@ -29,13 +34,20 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^5.0.2",
     "@vue/test-utils": "^2.0.0-0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "brotli-webpack-plugin": "^1.1.0",
     "chai": "^4.1.2",
+    "compression-webpack-plugin": "6.0.5",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-vue": "^7.0.0-0",
+    "image-webpack-loader": "^7.0.1",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "prettier": "^1.19.1",
-    "typescript": "~3.9.3"
+    "style-resources-loader": "^1.4.1",
+    "typescript": "~3.9.3",
+    "vue-cli-plugin-style-resources-loader": "^0.1.4",
+    "webpack-bundle-analyzer": "^4.2.0"
   }
 }

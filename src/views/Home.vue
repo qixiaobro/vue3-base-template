@@ -1,18 +1,68 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <div>name:{{ name }}</div>
+    <div>getter name:{{ lowCaseName }}</div>
+    <br />
+    <div>Vuex.age: {{ age }}</div>
+    <div>input:<input v-model.number="ageIncreaeNum" /></div>
+    <div><button @click="increase">age+input</button></div>
+    <br />
+    <div>接口数据：{{ indexInfo }}</div>
+    <div><button @click="changeIndexInfo">修改数据</button></div>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import {
+  defineComponent,
+  onMounted,
+  reactive,
+  toRefs,
+  computed,
+  ref
+} from "vue";
+import { CommonService } from "@/api/common";
+import { useStore } from "vuex";
 
-@Options({
-  components: {
-    HelloWorld
+export default defineComponent({
+  setup() {
+    const data = reactive({
+      indexInfo: {}
+    });
+    onMounted(async () => {
+      const result = await CommonService.getIndexInfo();
+      data.indexInfo = result.data;
+    });
+    const changeIndexInfo = () => {
+      data.indexInfo = { 1: 2 };
+    };
+
+    const store = useStore();
+    const state = reactive({
+      name: computed(() => store.state.user.name),
+      age: computed(() => store.state.user.age)
+    });
+    const getter = reactive({
+      lowCaseName: computed(() => store.getters.lowCaseName)
+    });
+    const ageIncreaeNum = ref(1);
+    const increase = () => {
+      store.commit({ type: "INCREASE_AGE", age: ageIncreaeNum.value || 0 });
+    };
+
+    return {
+      ...toRefs(data),
+      changeIndexInfo,
+      ...toRefs(state),
+      ...toRefs(getter),
+      increase,
+      ageIncreaeNum
+    };
   }
-})
-export default class Home extends Vue {}
+});
 </script>
+<style lang="less" scoped>
+.home {
+  color: @primary-color;
+}
+</style>
