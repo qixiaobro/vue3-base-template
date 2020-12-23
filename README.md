@@ -4,7 +4,6 @@
 * H5使用vant，封装媒体查询、分化出微信h5版本，封装微信jsApi的调用。
 
 
-
 - [x] vue.config.js 配置
 - [x] vuex  /模块分解
 - [x] vue-router
@@ -227,6 +226,23 @@ module.exports = {
   }
 };
 ```
+
+
+base-plugins:
+
+- [ ] vue.config.js 配置
+- [ ] vuex  /模块分解
+- [ ] vue-router/ 守卫封装
+- [ ] type /typescript 类封装
+- [ ] axios封装
+- [ ] .env.prod  .env.test
+- [ ] utils  /工具封装
+- [ ] theme
+- [ ] styles
+- [ ] api模块
+- [ ] views
+- [ ] less
+- [ ] components
 
 ## Project setup
 ```
