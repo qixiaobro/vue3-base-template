@@ -1,5 +1,5 @@
 # vue3-base-template
-使用`vue3+TypeScript`封装的项目基础模版。在模版基础搭建完成后，会建立不同分支。后续会进一步封装PC和H5版本。
+使用`vue3+TypeScript`封装的项目基础模版。在模版基础搭建完成后，会建立不同分支，进一步封装成PC常用模版和H5常用版本。
 * PC使用Element-UI
 * H5使用vant，封装媒体查询、分化出微信h5版本，封装微信jsApi的调用。
 
