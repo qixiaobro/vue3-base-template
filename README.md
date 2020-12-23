@@ -32,10 +32,14 @@
 
 配置如下：
 ```js
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require("path");
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const zopfli = require("@gfx/zopfli");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const BrotliPlugin = require("brotli-webpack-plugin");
 const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
 
@@ -93,6 +97,13 @@ module.exports = {
         });
     }
 
+    // 最小化代码
+    config.optimization.minimize(true);
+    // 分割代码
+    config.optimization.splitChunks({
+      chunks: "all"
+    });
+
     /**
      * @TODO 打包后文件大小分析
      */
@@ -131,6 +142,41 @@ module.exports = {
       );
     }
     config.plugins = [...config.plugins, ...plugins];
+
+    // 公共代码抽离
+    config.optimization = {
+      splitChunks: {
+        cacheGroups: {
+          vendor: {
+            chunks: "all",
+            test: /node_modules/,
+            name: "vendor",
+            minChunks: 1,
+            maxInitialRequests: 5,
+            minSize: 0,
+            priority: 100
+          },
+          common: {
+            chunks: "all",
+            test: /[\\/]src[\\/]js[\\/]/,
+            name: "common",
+            minChunks: 2,
+            maxInitialRequests: 5,
+            minSize: 0,
+            priority: 60
+          },
+          styles: {
+            name: "styles",
+            test: /\.(sa|sc|c)ss$/,
+            chunks: "all",
+            enforce: true
+          },
+          runtimeChunk: {
+            name: "manifest"
+          }
+        }
+      }
+    };
   },
 
   css: {
@@ -180,8 +226,8 @@ module.exports = {
     }
   }
 };
-
 ```
+
 ## Project setup
 ```
 npm install
