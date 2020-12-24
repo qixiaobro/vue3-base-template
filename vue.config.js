@@ -6,8 +6,6 @@ const BrotliPlugin = require("brotli-webpack-plugin");
 const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
 const merge = require("webpack-merge");
 const tsImportPluginFactory = require("ts-import-plugin");
-const autoprefixer = require("autoprefixer");
-const pxtoviewport = require("postcss-px-to-viewport");
 
 const resolve = dir => path.join(__dirname, dir);
 
@@ -177,14 +175,6 @@ module.exports = {
         lessOptions: {
           javascriptEnabled: true
         }
-      },
-      postcss: {
-        plugins: [
-          autoprefixer(),
-          pxtoviewport({
-            viewportWidth: 375
-          })
-        ]
       }
     }
   },

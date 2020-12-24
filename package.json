@@ -54,10 +54,5 @@
     "vconsole": "^3.3.4",
     "vue-cli-plugin-style-resources-loader": "^0.1.4",
     "webpack-bundle-analyzer": "^4.2.0"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
   }
 }
