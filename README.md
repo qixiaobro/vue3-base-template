@@ -12,6 +12,7 @@
 * [clipboard](https://clipboardjs.com/) 文本一键复制插件。 
 * [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper) 轮播滑动插件。 
 * [html2canvas](https://html2canvas.hertzen.com/) DOM转图片插件，推荐安装`1.0.0-rc.4`版本，高版本的在ios13上有bug。 
+* [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin)预渲染插件。一般用在history模式，在Vue,hash模式时有一些坑，但是也有骚操作可以使用它，减少应用白屏时间。具体可以看这篇文章
 
 ## demo页面：
 ![demo1](./src/assets/demo1.png)
