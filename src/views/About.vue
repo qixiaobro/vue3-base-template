@@ -51,7 +51,6 @@ export default defineComponent({
 
 <style lang="less" scoped>
 body {
-  font-size: 16px;
   background-color: #f8f8f8;
   -webkit-font-smoothing: antialiased;
 }
@@ -62,16 +61,16 @@ body {
     display: block;
   }
   &-group {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
   &-links {
-    padding: 15px 0;
-    font-size: 12px;
+    padding: 30px 0;
+    font-size: 24px;
     text-align: center;
     background-color: #fff;
     .van-icon {
       display: block;
-      font-size: 24px;
+      font-size: 48px;
     }
   }
 }

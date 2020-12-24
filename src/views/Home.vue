@@ -2,11 +2,9 @@
   <div class="home">
     <div>name:{{ name }}</div>
     <div>getter name:{{ lowCaseName }}</div>
-    <br />
     <div>Vuex.age: {{ age }}</div>
     <div>input:<input v-model.number="ageIncreaeNum" /></div>
     <div><button @click="increase">age+input</button></div>
-    <br />
     <div>接口数据：{{ indexInfo }}</div>
     <div><button @click="changeIndexInfo">修改数据</button></div>
   </div>
@@ -63,8 +61,18 @@ export default defineComponent({
 </script>
 <style lang="less" scoped>
 .home {
+  div {
+    width: 100%;
+    margin-top: 10px;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   color: @primary-color;
-  width: 400px;
-  font-size: 42px;
+  width: 750px;
+  height: 100%;
+  font-size: 36px;
+  line-height: 50px;
 }
 </style>
