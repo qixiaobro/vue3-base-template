@@ -1,7 +1,7 @@
 # vue3-base-template
 使用`vue3+TypeScript`封装的项目基础模版。在模版基础搭建完成后，会建立不同分支，进一步封装成PC常用模版和H5常用版本。
 * PC使用Element-UI
-* H5使用vant，封装媒体查询、分化出微信h5版本，封装微信jsApi的调用。
+* [vue3-base-templateH5](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5/README.md)：在[vue3-base-template](https://github.com/qixiaobro/vue3-base-template/tree/main)基础上进一步添加适合移动端H5的插件封装成的Vue3 H5模版框架。
 
 基本配置：
 - [x] vue.config.js 配置
