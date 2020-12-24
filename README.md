@@ -1,5 +1,5 @@
 # vue3-base-template-H5-wechat
-在[vue3-base-template-H5](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5/README.md)基础上进一步封装微信h5 jsApi操作的模版。
+在[vue3-base-template-H5](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5/README.md)基础上进一步封装微信jsApi操作的H5模版。
 
 ## H5版本特有插件：
 - [x] 引入[postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport/blob/master/README_CN.md)将px单位转换为视口单位的 (vw, vh, vmin, vmax) 的 PostCSS 插件。
