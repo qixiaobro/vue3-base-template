@@ -226,7 +226,6 @@ module.exports = {
   }
 };
 ```
-
 ## Project setup
 ```
 npm install
