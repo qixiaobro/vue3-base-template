@@ -6,11 +6,11 @@ H5版本特有插件：
 - [ ] 引入[vant](https://vant-contrib.gitee.io/vant/next/#/zh-CN) vue3版本的ui框架。
 - [ ] 引入[vConsole](https://github.com/Tencent/vConsole/blob/dev/README_CN.md) 针对手机网页的前端开发者调试面板。
 
-项目需求插件推荐：
-[smoothscroll-polyfill](https://github.com/jonaskuske/smoothscroll-anchor-polyfill) 页面平滑滚动补充插件，解决移动端通过js操作滚动不平滑问题。
-[clipboard](https://clipboardjs.com/) 文本一键复制插件。
-[vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper) 轮播滑动插件。
-[html2canvas](https://html2canvas.hertzen.com/) DOM转图片插件，推荐安装`1.0.0-rc.4`版本，高版本的在ios13上有bug。
+项目需求插件推荐： 
+* [smoothscroll-polyfill](https://github.com/jonaskuske/smoothscroll-anchor-polyfill) 页面平滑滚动补充插件，解决移动端通过js操作滚动不平滑问题。 
+* [clipboard](https://clipboardjs.com/) 文本一键复制插件。 
+* [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper) 轮播滑动插件。 
+* [html2canvas](https://html2canvas.hertzen.com/) DOM转图片插件，推荐安装`1.0.0-rc.4`版本，高版本的在ios13上有bug。 
 
 vue3-base-template的配置如下：
 基本配置：
