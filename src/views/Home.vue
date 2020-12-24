@@ -65,5 +65,6 @@ export default defineComponent({
 .home {
   color: @primary-color;
   width: 400px;
+  font-size: 42px;
 }
 </style>

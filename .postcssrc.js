@@ -6,9 +6,12 @@ module.exports = (ctx) => {
       autoprefixer: {},
       "postcss-px-to-viewport": {
         viewportWidth: isNormalDpr ? 375 : 750,
-        propList: ["*", "!font", "!font-size", "!border", "!border-width"],
+        propList: isNormalDpr
+          ? [("*", "!font", "!font-size", "!border", "!border-width")]
+          : ["*", "font", "font-size", "border", "border-width"],
         selectorBlackList: [],
-        minPixelValue: 4,
+        unitPrecision: 3,
+        minPixelValue: 1,
       },
     },
   };
