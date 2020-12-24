@@ -1,8 +1,18 @@
-# vue3-base-template
-使用`vue3+TypeScript`封装的项目基础模版。在模版基础搭建完成后，会建立不同分支，进一步封装成PC常用模版和H5常用版本。
-* PC使用Element-UI
-* H5使用vant，封装媒体查询、分化出微信h5版本，封装微信jsApi的调用。
+# vue3-base-template-H5
+在[vue3-base-template](https://github.com/qixiaobro/vue3-base-template/tree/main)基础上进一步添加适合移动端H5的插件封装成的Vue3 H5模版框架。
 
+H5版本特有插件：
+- [ ]引入[postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport/blob/master/README_CN.md)将px单位转换为视口单位的 (vw, vh, vmin, vmax) 的 PostCSS 插件。
+- [ ]引入[vant](https://vant-contrib.gitee.io/vant/next/#/zh-CN) vue3版本的ui框架。
+- [ ]引入[vConsole](https://github.com/Tencent/vConsole/blob/dev/README_CN.md) 针对手机网页的前端开发者调试面板。
+
+项目需求插件推荐：
+[smoothscroll-polyfill](https://github.com/jonaskuske/smoothscroll-anchor-polyfill) 页面平滑滚动补充插件，解决移动端通过js操作滚动不平滑问题。
+[clipboard](https://clipboardjs.com/) 文本一键复制插件。
+[vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper) 轮播滑动插件。
+[html2canvas](https://html2canvas.hertzen.com/) DOM转图片插件，推荐安装`1.0.0-rc.4`版本，高版本的在ios13上有bug。
+
+vue3-base-template的配置如下：
 基本配置：
 - [x] vue.config.js 配置
 - [x] vuex  /模块分解
@@ -11,8 +21,6 @@
 - [x] axios封装
 - [x] .env  .env.production
 - [x] utils  /工具封装
-- [ ] theme
-- [ ] i18n
 - [x] styles
 - [x] api模块
 - [x] less
