@@ -2,9 +2,9 @@
 在[vue3-base-template](https://github.com/qixiaobro/vue3-base-template/tree/main)基础上进一步添加适合移动端H5的插件封装成的Vue3 H5模版框架。
 
 H5版本特有插件：
-- []引入[postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport/blob/master/README_CN.md)将px单位转换为视口单位的 (vw, vh, vmin, vmax) 的 PostCSS 插件。
-- []引入[vant](https://vant-contrib.gitee.io/vant/next/#/zh-CN) vue3版本的ui框架。
-- []引入[vConsole](https://github.com/Tencent/vConsole/blob/dev/README_CN.md) 针对手机网页的前端开发者调试面板。
+- [ ] 引入[postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport/blob/master/README_CN.md)将px单位转换为视口单位的 (vw, vh, vmin, vmax) 的 PostCSS 插件。
+- [ ] 引入[vant](https://vant-contrib.gitee.io/vant/next/#/zh-CN) vue3版本的ui框架。
+- [ ] 引入[vConsole](https://github.com/Tencent/vConsole/blob/dev/README_CN.md) 针对手机网页的前端开发者调试面板。
 
 项目需求插件推荐：
 [smoothscroll-polyfill](https://github.com/jonaskuske/smoothscroll-anchor-polyfill) 页面平滑滚动补充插件，解决移动端通过js操作滚动不平滑问题。
