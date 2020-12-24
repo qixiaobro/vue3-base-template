@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "serve:dev": "vue-cli-service serve",
+    "build:dev": "vue-cli-service build --mode development",
     "build:prod": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
@@ -12,6 +13,7 @@
   "dependencies": {
     "@vue/composition-api": "^1.0.0-beta.21",
     "axios": "^0.21.0",
+    "vant": "^3.0.0",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-composable": "^1.0.0-beta.12",
@@ -44,10 +46,18 @@
     "image-webpack-loader": "^7.0.1",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "postcss-px-to-viewport": "^1.1.1",
     "prettier": "^1.19.1",
     "style-resources-loader": "^1.4.1",
+    "ts-import-plugin": "^1.6.7",
     "typescript": "~3.9.3",
+    "vconsole": "^3.3.4",
     "vue-cli-plugin-style-resources-loader": "^0.1.4",
     "webpack-bundle-analyzer": "^4.2.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   }
 }

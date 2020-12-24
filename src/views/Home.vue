@@ -64,5 +64,6 @@ export default defineComponent({
 <style lang="less" scoped>
 .home {
   color: @primary-color;
+  width: 400px;
 }
 </style>

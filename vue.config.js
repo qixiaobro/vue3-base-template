@@ -1,13 +1,13 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require("path");
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const zopfli = require("@gfx/zopfli");
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const BrotliPlugin = require("brotli-webpack-plugin");
 const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
+const merge = require("webpack-merge");
+const tsImportPluginFactory = require("ts-import-plugin");
+const autoprefixer = require("autoprefixer");
+const pxtoviewport = require("postcss-px-to-viewport");
 
 const resolve = dir => path.join(__dirname, dir);
 
@@ -24,7 +24,7 @@ module.exports = {
   lintOnSave: process.env.NODE_ENV !== "production",
   runtimeCompiler: true, // 是否使用包含运行时编译器的 Vue 构建版本
   productionSourceMap: !IS_PROD, // 生产环境的 source map
-  parallel: require("os").cpus().length > 1, //该选项在系统的 CPU 有多于一个内核时自动启用，仅作用于生产构建。
+  parallel: false, //要设置为false，否则vant按需引入打包生产后样式会失效
   pwa: {},
 
   chainWebpack: config => {
@@ -45,6 +45,29 @@ module.exports = {
       .set("@router", resolve("src/router"))
       .set("@store", resolve("src/store"))
       .set("@utils", resolve("src/utils"));
+
+    //@TODO vant组件按需引入
+    config.module
+      .rule("ts")
+      .use("ts-loader")
+      .tap(options => {
+        options = merge(options, {
+          transpileOnly: true,
+          getCustomTransformers: () => ({
+            before: [
+              tsImportPluginFactory({
+                libraryName: "vant",
+                libraryDirectory: "es",
+                style: true
+              })
+            ]
+          }),
+          compilerOptions: {
+            module: "es2015"
+          }
+        });
+        return options;
+      });
 
     /**
      * @TODO 压缩图片
@@ -154,6 +177,14 @@ module.exports = {
         lessOptions: {
           javascriptEnabled: true
         }
+      },
+      postcss: {
+        plugins: [
+          autoprefixer(),
+          pxtoviewport({
+            viewportWidth: 375
+          })
+        ]
       }
     }
   },
