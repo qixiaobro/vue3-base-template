@@ -13,6 +13,10 @@
 * [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper) 轮播滑动插件。 
 * [html2canvas](https://html2canvas.hertzen.com/) DOM转图片插件，推荐安装`1.0.0-rc.4`版本，高版本的在ios13上有bug。 
 
+## demo页面：
+![demo1](./src/assets/demo1.png)
+![demo2](./src/assets/demo2.png)
+
 ## vue3-base-template-H5 vue.config.js 配置如下：
 ```js
 const path = require("path");
