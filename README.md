@@ -234,6 +234,11 @@ module.exports = {
   }
 };
 ```
+## Clone  `vue3-base-template-H5`
+```
+git clone -b vue3-base-template-H5 git@github.com:qixiaobro/vue3-base-template.git
+```
+
 ## Project setup
 ```
 npm install
@@ -258,6 +263,3 @@ npm run test:unit
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
