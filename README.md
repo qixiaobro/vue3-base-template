@@ -2,7 +2,7 @@
 使用`vue3+TypeScript`封装的项目基础模版。在模版基础搭建完成后，会建立不同分支，进一步封装成PC常用模版和H5常用版本。
 - [ ] PC使用Element-UI
 - [x] [vue3-base-template-H5](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5/README.md)：在[vue3-base-template](https://github.com/qixiaobro/vue3-base-template/tree/main)基础上进一步添加适合移动端H5的插件封装成的Vue3 H5模版框架。
-- [ ] [vue3-base-template-H5-wechat](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5-Wechat/README.md)：在[vue3-base-template-H5](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5/README.md)基础上进一步封装微信jsApi操作的H5模版。
+- [x] [vue3-base-template-H5-wechat](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5-Wechat/README.md)：在[vue3-base-template-H5](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5/README.md)基础上进一步封装微信jsApi操作的H5模版。
 
 
 基本配置：
