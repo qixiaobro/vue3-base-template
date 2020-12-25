@@ -1,7 +1,7 @@
 # vue3-base-template-H5-wechat
 在[vue3-base-template-H5](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5/README.md)基础上进一步封装微信jsApi操作的H5模版。
 
-[vue3-base-template-H5](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5/README.md)封装了`wx.config`,`wx.wxPay`,`wx.wxShare`。 具体内容在`utils/wxApi.ts`
+[vue3-base-template-H5-wechat](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5-Wechat/README.md)封装了`wx.config`,`wx.wxPay`,`wx.wxShare`。 具体内容在`utils/wxApi.ts`
 使用方法：
 ```js
 this.$wxApi.wxConfig().then((res)=>{
