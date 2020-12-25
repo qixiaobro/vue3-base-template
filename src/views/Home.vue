@@ -7,6 +7,8 @@
     <div><button @click="increase">age+input</button></div>
     <div>接口数据：{{ indexInfo }}</div>
     <div><button @click="changeIndexInfo">修改数据</button></div>
+    <div><input v-model="copyValue" /></div>
+    <div><button @click="copyToClipboard(copyValue)">一键复制</button></div>
   </div>
 </template>
 
@@ -48,13 +50,37 @@ export default defineComponent({
       store.commit({ type: "INCREASE_AGE", age: ageIncreaeNum.value || 0 });
     };
 
+    const copyValue = ref("");
+    const copyToClipboard = (str: string) => {
+      const el = document.createElement("textarea");
+      el.value = str;
+      el.setAttribute("readonly", "");
+      el.style.position = "absolute";
+      el.style.left = "-9999px";
+      document.body.appendChild(el);
+      const getSelection = window?.getSelection();
+      const selected =
+        getSelection && getSelection.rangeCount > 0
+          ? window.getSelection()?.getRangeAt(0)
+          : false;
+      el.select();
+      document.execCommand("copy");
+      document.body.removeChild(el);
+      if (selected) {
+        window.getSelection()?.removeAllRanges();
+        window.getSelection()?.addRange(selected);
+      }
+    };
+
     return {
       ...toRefs(data),
       changeIndexInfo,
       ...toRefs(state),
       ...toRefs(getter),
       increase,
-      ageIncreaeNum
+      ageIncreaeNum,
+      copyValue,
+      copyToClipboard
     };
   }
 });

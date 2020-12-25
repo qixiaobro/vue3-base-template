@@ -1,6 +1,16 @@
 # vue3-base-template-H5-wechat
 在[vue3-base-template-H5](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5/README.md)基础上进一步封装微信jsApi操作的H5模版。
 
+[vue3-base-template-H5](https://github.com/qixiaobro/vue3-base-template/blob/vue3-base-template-H5/README.md)封装了`wx.config`,`wx.wxPay`,`wx.wxShare`。  
+使用方法：
+```js
+this.$wxApi.wxConfig().then((res)=>{
+  if(res){
+    this.$wxApi.wxPay()
+  }
+})
+```
+
 ## H5版本特有插件：
 - [x] 引入[postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport/blob/master/README_CN.md)将px单位转换为视口单位的 (vw, vh, vmin, vmax) 的 PostCSS 插件。
 - [x] 引入[vant](https://vant-contrib.gitee.io/vant/next/#/zh-CN) vue3版本的ui框架。默认会安装[vant-use:	Vant Composition API 合集](https://youzan.github.io/vant/vant-use/)。

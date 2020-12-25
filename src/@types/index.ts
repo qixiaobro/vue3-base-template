@@ -1,9 +1,11 @@
 /*
  * @Date: 2020-12-10 10:16:09
- * @Description:类型封装
+ * @Description:类型封装,声明
  */
 
-// 接口响应通过格式
+/**
+ * @description: 响应通过
+ */
 export interface HttpResponse {
   status: number;
   statusText: string;
@@ -12,4 +14,24 @@ export interface HttpResponse {
     desc: string;
     [key: string]: any;
   };
+}
+
+/**
+ * @description: 微信支付
+ */
+export interface WcPay {
+  appId: string;
+  package: string;
+  signType: string;
+  paySign: string;
+  timeStamp: string; // 必填，生成签名的时间戳
+  nonceStr: string; // 必填，生成签名的随机串
+}
+
+/**
+ * @description: 微信支付返回消息
+ */
+export interface WxMsg {
+  err_msg: string;
+  [prop: string]: string;
 }
