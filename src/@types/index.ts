@@ -17,6 +17,22 @@ export interface HttpResponse {
 }
 
 /**
+ * @description: 微信验签返回结构
+ */
+export interface GetWeChatConfig {
+  resultCode: number;
+  resultMsg: string;
+  resultBody: {
+    appId: string;
+    debug: boolean;
+    jsApiList?: [string];
+    nonceStr: string;
+    signature: string;
+    timestamp: string;
+  };
+}
+
+/**
  * @description: 微信支付
  */
 export interface WcPay {

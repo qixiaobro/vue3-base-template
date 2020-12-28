@@ -12,7 +12,7 @@ const wx = window["wx"];
  */
 async function wxConfig() {
   const result = await CommonService.getWxSign();
-  const data = result.data;
+  const data = result.resultBody;
   return new Promise(resolve => {
     wx.config({
       debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来。
@@ -123,7 +123,11 @@ function wxShare(title: string, link: string, imgUrl: string, desc: string) {
 }
 
 export default {
-  wxConfig,
-  wxPay,
-  wxShare
+  install: (app: any) => {
+    app.config.globalProperties.$wxApi = {
+      wxConfig,
+      wxPay,
+      wxShare
+    };
+  }
 };

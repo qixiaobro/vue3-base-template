@@ -66,7 +66,7 @@ service.interceptors.response.use(
   // 请求有响应
   async (response: AxiosResponse) => {
     if (response.status === 200) {
-      return Promise.resolve(response.data.data);
+      return Promise.resolve(response.data);
     } else {
       const msg = getErrorCode2text(response);
       return Promise.reject(new Error(msg));
@@ -81,11 +81,6 @@ service.interceptors.response.use(
       errorMsg = error.response.data.message
         ? error.response.data.message
         : error.response.data.data;
-    }
-
-    // timeout
-    if (errorMsg.indexOf("timeout") >= 0) {
-      errorMsg = "Request timeout!";
     }
 
     if (error?.response?.status === 401) {
