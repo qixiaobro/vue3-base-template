@@ -9,9 +9,9 @@ if (process.env.NODE_ENV === "development") {
   new Vconsole();
 }
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .mount("#app");
+const app = createApp(App);
+app.use(store);
+app.use(router);
+app.mount("#app");
 
-App.config.globalProperties.$wxApi = wxApi;
+app.config.globalProperties.$wxApi = wxApi;
